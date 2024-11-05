@@ -1,12 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header/Header.astro';
+import Hero from '../components/Hero/Hero.astro';
 
 ---
 
 <Layout title="This Is A Test" >
 	<Header />
+	
 	<main class="container mx-auto">
+		<section class="section">
+			<Hero />
+		</section>
+
 		<section class="section">
 			<h1>This Is <span class="text-gradient">Astro</span></h1>
 		</section>
