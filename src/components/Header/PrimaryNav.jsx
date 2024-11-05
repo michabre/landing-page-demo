@@ -3,7 +3,7 @@ import {AcmeLogo} from "./AcmeLogo.jsx";
 
 export default function PrimaryNav() {
   return (
-    <Navbar maxWidth="xl">
+    <Navbar className="container mx-auto" maxWidth="full">
       <NavbarBrand>
         <AcmeLogo />
         <p className="font-bold text-inherit">ACME</p>
