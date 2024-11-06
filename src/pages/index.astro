@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header/Header.astro';
 import Hero from '../components/Hero/Hero.astro';
+import TourVideo from '../components/Product/TourVideo';
+import SectionHeader from '../components/Text/SectionHeader';
+import CardBlurred from '../components/Card/CardBlurred';
+
+import {Spacer} from "@nextui-org/react";
 
 ---
 
@@ -14,12 +19,23 @@ import Hero from '../components/Hero/Hero.astro';
 		</section>
 
 		<section class="section">
-			<h1>This Is <span class="text-gradient">Astro</span></h1>
+			<TourVideo />
 		</section>
 
 		<section id="features" class="section">
-			<h1>Features</h1>
+			<SectionHeader title="Does this describe you?" />
+			<p class="text-base text-center px-40">To get people thinking about converting, we need to show them how their current way of doing things is causing them pain. We'll use words that stir up emotions and make visitors ask themselves: "How can I make this better?"</p>
 		</section>
+
+		<section id="social-proof" class="section">
+			<SectionHeader title="Don't just take our word for it" />
+			<Spacer />
+			<div class="columns-3">
+				<CardBlurred />
+				<CardBlurred />
+				<CardBlurred />	
+			</div>
+		</section>	
 
 		<section id="pricing" class="section">
 			<h1>Pricing</h1>
