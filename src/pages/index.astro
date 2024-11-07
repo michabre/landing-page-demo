@@ -4,9 +4,13 @@ import Header from '../components/Header/Header.astro';
 import Hero from '../components/Hero/Hero.astro';
 import TourVideo from '../components/Product/TourVideo';
 import SectionHeader from '../components/Text/SectionHeader';
+import CardBasic from '../components/Card/CardBasic';
 import CardBlurred from '../components/Card/CardBlurred';
+import FeaturesAccordion from '../components/Accordion/FeaturesAccordion';
+import PriceComparison from '../components/PriceComparison/PriceComparison.astro';
 
 import {Spacer} from "@nextui-org/react";
+import {Button} from "@nextui-org/react";
 
 ---
 
@@ -29,7 +33,7 @@ import {Spacer} from "@nextui-org/react";
 
 		<section id="social-proof" class="section">
 			<SectionHeader title="Don't just take our word for it" />
-			<Spacer />
+			<Spacer y={8} />
 			<div class="columns-3">
 				<CardBlurred />
 				<CardBlurred />
@@ -37,17 +41,66 @@ import {Spacer} from "@nextui-org/react";
 			</div>
 		</section>	
 
-		<section id="pricing" class="section">
-			<h1>Pricing</h1>
+		<section id="benefits" class="bg-[#ffffff] rounded-lg">
+			<div class="section ">
+			<SectionHeader title="Title to describe the benefit with your product again" />
+			<p class="text-base text-center px-40">Subtitle to describe the solution to the users pain points again.</p>
+				<Spacer y={4} />
+				<div class="center">
+					<Button color="primary" size="lg" client:visible>Sign Up</Button>
+				</div>
+				<Spacer y={12} />
+				<div class="columns-2 p-4 ">
+					<div>
+						<FeaturesAccordion client:visible />
+					</div>
+					<div>
+						<img src="https://placehold.co/600x600" alt="Hero image" class="hero__image" />
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section id="customers" class="section">
-			<h1>Customers</h1>
+		<section id="features" class="section">
+			<SectionHeader title="Features" />
+			<p class="text-base text-center px-40">Subtitle about the features</p>
+			<Spacer y={4} />
+			<div class="columns-2">
+				<CardBasic client:visible />
+				<CardBasic client:visible />
+				<CardBasic client:visible />
+				<CardBasic client:visible />
+			</div>
+		</section>
+
+		<section id="pricing" class="section">
+				<SectionHeader title="Title about the benefit of your pricing" />
+				<p class="text-base text-center px-40">
+					Text to encourage users to find the correct plan.<br />
+					You can for example promote a free tier here.
+				</p>
+				<Spacer y={12} />
+				<PriceComparison />
+		</section>
+
+		<section id="faq" class="bg-[#ffffff] rounded-lg">
+			<div class="section">
+			  <SectionHeader title="FAQ" />
+		  </div>
+		</section>
+
+		<section id="signup" class="section">
+			<SectionHeader title="Title to describe the benefit with your product again" />
+			<p class="text-base text-center px-40">Subtitle to describe the solution to the users pain points again.</p>
 		</section>
 	</main>
 </Layout>
 
 <style lang="scss">
+	body, html {
+		background: rgb(213,216,226);
+		background: linear-gradient(138deg, rgba(213,216,226,1) 0%, rgba(200,200,232,1) 47%, rgba(148,194,203,1) 100%);
+	}
 	main {
   padding-top: 64px;
 }
