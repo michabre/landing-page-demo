@@ -1,17 +1,15 @@
+import type { IPricingComparisonCard } from '@interfaces/IPricingComparisonCard'
+import PriceComparisonCard from "./PriceComparisonCard"
 
-import { useState } from 'react';
-import PriceComparisonCard from "./PriceComparisonCard";
-
-export default function PriceComparisonTool() {
-  const [active, setActive] = useState(false);
+export default function PriceComparisonTool({options}:{options:any}) {
   return (
     <div className="price-comparison">
       <div className="columns-3 gap-8">
-        <PriceComparisonCard active={false} />
-        <PriceComparisonCard active={true} />
-        <PriceComparisonCard active={false} />
+        {options.map((pricing:IPricingComparisonCard, index:number) => <PriceComparisonCard 
+          key={`${pricing.type}-${index}`} 
+          title={pricing.type} 
+          selected={pricing.selected} />)}
       </div>
     </div>
-    
   );
 }

@@ -1,12 +1,13 @@
 import {Button, Card, CardHeader, CardBody, CardFooter, Divider, Image} from "@nextui-org/react";
 import "./priceComparisonCard.css";
 
-export default function PriceComparisonCard({active}:{active:boolean}) {
-  const activeClass = active ? "active" : "";
+export default function PriceComparisonCard({title, selected}:{title:string, selected:string}) {
+  const selectedClass = (selected === "true") ? "selected" : "";
+
   return (
-    <Card className={activeClass}>
+    <Card className={selectedClass}>
       <CardHeader className="flex h-full flex-col justify-center gap-4 md:items-start">
-        <h3>Basic</h3>
+        <h3>{title}</h3>
         <p>For hobby & side projects</p>
         <div>$10 / month</div>
         <p>Billed yearly</p>

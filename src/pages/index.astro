@@ -1,4 +1,6 @@
 ---
+
+
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header/Header.astro';
 import Hero from '../components/Hero/Hero.astro';
@@ -8,6 +10,8 @@ import CardBasic from '../components/Card/CardBasic';
 import CardBlurred from '../components/Card/CardBlurred';
 import FeaturesAccordion from '../components/Accordion/FeaturesAccordion';
 import PriceComparison from '../components/PriceComparison/PriceComparison.astro';
+import SignUpForm from '../components/Form/SignUpForm'
+import Footer from '../components/Footer/Footer.astro';
 
 import {Spacer} from "@nextui-org/react";
 import {Button} from "@nextui-org/react";
@@ -86,14 +90,17 @@ import {Button} from "@nextui-org/react";
 		<section id="faq" class="bg-[#ffffff] rounded-lg">
 			<div class="section">
 			  <SectionHeader title="FAQ" />
+				<FeaturesAccordion client:visible />
 		  </div>
 		</section>
 
 		<section id="signup" class="section">
 			<SectionHeader title="Title to describe the benefit with your product again" />
 			<p class="text-base text-center px-40">Subtitle to describe the solution to the users pain points again.</p>
+			<SignUpForm />
 		</section>
 	</main>
+	<Footer />
 </Layout>
 
 <style lang="scss">
