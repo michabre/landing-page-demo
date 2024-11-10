@@ -1,0 +1,15 @@
+.card-tag {
+  z-index: 9;
+  top: -32px;
+  left: 50%;
+  right: 50%;
+}
+.card-type {
+  width: 100%;
+  border-bottom: 1px dashed #11181C;
+  padding-bottom: 0.75rem;
+}
+.selected {
+  border: 3px solid hotpink;
+  scale: 1.07;
+}
