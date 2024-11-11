@@ -1,34 +1,14 @@
 import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+import { MdOutlineStarBorder } from "react-icons/md";
 
 export default function CardBasic() {
   return (
     <Card className="mb-4">
-      <CardHeader className="flex gap-3">
-        <Image
-          alt="nextui logo"
-          height={40}
-          radius="sm"
-          src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-          width={40}
-        />
-        <div className="flex flex-col">
-          <p className="text-md">NextUI</p>
-          <p className="text-small text-default-500">nextui.org</p>
-        </div>
-      </CardHeader>
-      <CardBody>
-        <p>Make beautiful websites regardless of your design experience.</p>
+      <CardBody className="p-12">
+        <MdOutlineStarBorder size={42} />
+        <h3 className="text-lg font-bold">Feature</h3>
+        <p className="text-base">Make beautiful websites regardless of your design experience.</p>
       </CardBody>
-      <Divider/>
-      <CardFooter>
-        <Link
-          isExternal
-          showAnchorIcon
-          href="https://github.com/nextui-org/nextui"
-        >
-          Visit source code on GitHub.
-        </Link>
-      </CardFooter>
     </Card>
   );
 }

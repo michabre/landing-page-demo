@@ -1,6 +1,4 @@
 ---
-
-
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header/Header.astro';
 import Hero from '../components/Hero/Hero.astro';
@@ -13,8 +11,7 @@ import PriceComparison from '../components/PriceComparison/PriceComparison.astro
 import SignUpForm from '../components/Form/SignUpForm'
 import Footer from '../components/Footer/Footer.astro';
 
-import {Spacer} from "@nextui-org/react";
-import {Button} from "@nextui-org/react";
+import {Button, Spacer} from "@nextui-org/react";
 
 ---
 
@@ -38,14 +35,14 @@ import {Button} from "@nextui-org/react";
 		<section id="social-proof" class="section">
 			<SectionHeader title="Don't just take our word for it" />
 			<Spacer y={8} />
-			<div class="columns-3">
+			<div class="columns-3 gap-8">
 				<CardBlurred />
 				<CardBlurred />
 				<CardBlurred />	
 			</div>
 		</section>	
 
-		<section id="benefits" class="bg-[#ffffff] rounded-lg">
+		<section id="benefits" class="bg-[#ffffff] rounded-lg section-margin">
 			<div class="section ">
 			<SectionHeader title="Title to describe the benefit with your product again" />
 			<p class="text-base text-center px-40">Subtitle to describe the solution to the users pain points again.</p>
@@ -68,7 +65,7 @@ import {Button} from "@nextui-org/react";
 		<section id="features" class="section">
 			<SectionHeader title="Features" />
 			<p class="text-base text-center px-40">Subtitle about the features</p>
-			<Spacer y={4} />
+			<Spacer y={8} />
 			<div class="columns-2">
 				<CardBasic client:visible />
 				<CardBasic client:visible />
@@ -114,5 +111,8 @@ import {Button} from "@nextui-org/react";
 .section {
 	width: 1000px;
 	margin: auto;
+}
+.section-margin {
+	margin: 70px 0;
 }
 </style>
