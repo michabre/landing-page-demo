@@ -7,7 +7,7 @@ export default function FaqAccordion() {
   return (
     <div className="faq accordion">
     <Accordion>
-      <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1" onPress={() => console.log("testing")}>
+      <AccordionItem key="1" className="accordion-item" aria-label="Accordion 1" title="Accordion 1" onPress={() => console.log("testing")}>
         <div>{defaultContent}</div>
       </AccordionItem>
       <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
