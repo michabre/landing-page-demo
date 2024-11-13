@@ -8,7 +8,7 @@ import CardBasic from '../components/Card/CardBasic';
 import CardBlurred from '../components/Card/CardBlurred';
 import Accordion from '../components/Accordion/Accordion.astro';
 import PriceComparison from '../components/PriceComparison/PriceComparison.astro';
-import SignUpForm from '../components/Form/SignUpForm'
+import SignUpForm from '../components/Form/Form.astro'
 import Footer from '../components/Footer/Footer.astro';
 
 import {Button, Spacer} from "@nextui-org/react";
@@ -53,7 +53,7 @@ import {Button, Spacer} from "@nextui-org/react";
 				<Spacer y={12} />
 				<div class="columns-2 p-4 ">
 					<div>
-						<Accordion client:visible />
+						<Accordion />
 					</div>
 					<div>
 						<img src="https://placehold.co/600x600" alt="Hero image" class="hero__image" />
