@@ -1,8 +1,65 @@
 ---
+
 ---
-<footer id="footer">
-  <p>This is the footer.</p>
-</footer>
+<section id="footer" class="flex min-h-[200px] w-full justify-center">
+    <footer class="container px-6 py-8 md:py-12 flex flex-col gap-8 md:gap-20">
+      <section class="flex w-full flex-col items-start justify-between gap-8 md:flex-row md:gap-20">
+        <section class="flex items-center gap-2 font-semibold">
+          <svg fill="none" height="36" viewBox="0 0 32 32" width="36"><path clip-rule="evenodd" d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+          <span class="font-bold text-inherit">ACME</span>
+        </section>
+        
+        <section class="flex flex-col justify-center gap-4">
+          <section class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-20">
+            <div class="flex flex-col gap-4 md:gap-3">
+              <h2 class="text-left font-semibold tracking-tight text-foreground-grey text-base md:text-lg">
+                Contact
+              </h2>
+              <div class="flex flex-col gap-3 md:gap-2">
+                <a href="mailto:support@acme.com">
+                  <p class="text-left text-foreground leading-5">
+                    support@acme.com
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-3">
+              <h2 class="text-left font-semibold tracking-tight text-foreground-grey text-base md:text-lg">
+                Help
+              </h2>
+              <div class="flex flex-col gap-3 md:gap-2">
+                <a href="#faq">
+                  <p class="text-left text-foreground leading-5">FAQ</p>
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 md:gap-3">
+              <h2 class="text-left font-semibold tracking-tight text-foreground-grey text-base md:text-lg">
+                Legal
+              </h2>
+              <div class="flex flex-col gap-3 md:gap-2">
+                <a href="/legal/terms-of-service">
+                  <p class="text-left text-foreground leading-5">
+                    Terms of Service
+                  </p>
+                </a>
+                <a href="/legal/privacy-policy">
+                  <p class="text-left text-foreground leading-5">
+                    Privacy Policy
+                  </p>
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <p class="text-left text-base leading-5 text-muted-foreground">
+        @2024 Acme, All rights reserved
+      </p>
+
+    </footer>
+</section>
 
 <style lang="scss">
   #footer {
@@ -10,5 +67,9 @@
     color: #fff;
     padding: 1rem;
     text-align: center;
+    p {
+      font-size: 1rem;
+      color: #ccc;
+    }
   }
 </style>
