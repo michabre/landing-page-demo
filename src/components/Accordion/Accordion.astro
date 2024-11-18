@@ -1,4 +1,10 @@
 ---
+import * as data from './data.md'
 import FeaturesAccordion from "./FeaturesAccordion"
+
 ---
-<FeaturesAccordion />   
+<FeaturesAccordion client:visible items={data.frontmatter.data} />   
+
+<style lang="scss">
+
+</style>
