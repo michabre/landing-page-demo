@@ -11,8 +11,6 @@ import PriceComparison from '../components/PriceComparison/PriceComparison.astro
 import SignUpForm from '../components/Form/Form.astro'
 import Footer from '../components/Footer/Footer.astro';
 
-import {Button, Spacer} from "@nextui-org/react";
-
 ---
 
 <Layout title="This Is A Test" >
@@ -34,7 +32,6 @@ import {Button, Spacer} from "@nextui-org/react";
 
 		<section id="social-proof" class="section">
 			<SectionHeader title="Don't just take our word for it" />
-			<Spacer y={8} />
 			<div class="columns-3 gap-8">
 				<CardBlurred />
 				<CardBlurred />
@@ -46,11 +43,11 @@ import {Button, Spacer} from "@nextui-org/react";
 			<div class="section ">
 			<SectionHeader title="Title to describe the benefit with your product again" />
 			<p class="text-base text-center px-40">Subtitle to describe the solution to the users pain points again.</p>
-				<Spacer y={4} />
+				
 				<div class="center">
-					<Button color="primary" size="lg" client:visible>Sign Up</Button>
+					<button class="button button-primary">Sign Up</button>
 				</div>
-				<Spacer y={12} />
+				
 				<div class="columns-2 p-4 ">
 					<div>
 						<Accordion />
@@ -65,7 +62,6 @@ import {Button, Spacer} from "@nextui-org/react";
 		<section id="features" class="section">
 			<SectionHeader title="Features" />
 			<p class="text-base text-center px-40">Subtitle about the features</p>
-			<Spacer y={8} />
 			<div class="columns-2">
 				<CardBasic client:visible />
 				<CardBasic client:visible />
@@ -80,7 +76,6 @@ import {Button, Spacer} from "@nextui-org/react";
 					Text to encourage users to find the correct plan.<br />
 					You can for example promote a free tier here.
 				</p>
-				<Spacer y={16} />
 				<PriceComparison />
 		</section>
 
@@ -102,7 +97,7 @@ import {Button, Spacer} from "@nextui-org/react";
 	
 </Layout>
 
-<style lang="scss">
+<style lang="css">
 	body, html {
 		background: rgb(213,216,226);
 		background: linear-gradient(138deg, rgba(213,216,226,1) 0%, rgba(200,200,232,1) 47%, rgba(148,194,203,1) 100%);

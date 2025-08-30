@@ -1,5 +1,5 @@
 import type { IPricingComparisonCard } from '@interfaces/IPricingComparisonCard'
-import {Button, Card, CardHeader, CardBody, CardFooter, Divider, Image} from "@nextui-org/react";
+import {Button, Card, CardHeader, CardBody, CardFooter, Divider} from "@nextui-org/react";
 import "./priceComparisonCard.scss";
 
 export default function PriceComparisonCard({type, title, description, price, features, selected}:IPricingComparisonCard) {

@@ -1,5 +1,5 @@
 ---
-import {Button} from "@nextui-org/react";
+
 ---
 <div class="hero columns-2">
   <div>
@@ -7,7 +7,7 @@ import {Button} from "@nextui-org/react";
       <h2 class="hero__title">Concise Heading
         that Describes the benefit of your product</h2>
       <p class="hero__description text-foreground text-center md:text-left">Descriptive content to describe <strong>what</strong> the product is.</p>
-      <Button color="primary" client:visible>Get Started</Button>
+      <button class="button button-primary">Get Started</button>
     </div>
   </div>
   <div>
@@ -15,16 +15,14 @@ import {Button} from "@nextui-org/react";
   </div>
 </div>
 
-<style lang="scss">
-.hero {
-  &__title {
-    font-size: 3.75rem;
-    line-height: 1;
-    letter-spacing: -.025em;
-    font-weight: 800;
-  }
-  &__description {
-    line-height: 2rem;
-  }
+<style lang="css">
+.hero__title {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -.025em;
+  font-weight: 800;
+}
+.hero__description {
+  line-height: 2rem;
 }
 </style>

@@ -1,4 +1,4 @@
-import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+import { Card, CardBody } from "@nextui-org/react";
 import { MdOutlineStarBorder } from "react-icons/md";
 
 export default function CardBasic() {

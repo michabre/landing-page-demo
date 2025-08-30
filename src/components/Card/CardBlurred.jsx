@@ -1,5 +1,5 @@
-import {Card, CardHeader, CardBody, Image, CardFooter} from "@nextui-org/react";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import {Card, CardBody, Image, CardFooter} from "@nextui-org/react";
+import { FaQuoteLeft } from "react-icons/fa";
 
 export default function CardBlurred() {
   return (
@@ -8,7 +8,7 @@ export default function CardBlurred() {
         <Image
           alt="Card background"
           className="object-cover rounded-full opacity-1 aspect-square"
-          src="https://loremflickr.com/320/240?random=1"
+          src=""
           width={320}
         />
       </CardBody>
