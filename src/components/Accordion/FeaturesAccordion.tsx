@@ -4,7 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import type { IAccordionItem } from '@interfaces/IAccordionItem'
-import "./accordion.scss";
+import "./accordion.css";
 
 export default function FeaturesAccordion({items}:{items: IAccordionItem[]}) {
   return (

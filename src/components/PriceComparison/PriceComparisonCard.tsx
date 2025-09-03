@@ -1,6 +1,6 @@
 import type { IPricingComparisonCard } from '@interfaces/IPricingComparisonCard'
 import {Button, Card, CardHeader, CardBody, CardFooter, Divider} from "@nextui-org/react";
-import "./priceComparisonCard.scss";
+import "./priceComparisonCard.css";
 
 export default function PriceComparisonCard({type, title, description, price, features, selected}:IPricingComparisonCard) {
   const selectedClass = (selected === "true") ? "selected" : "";
