@@ -12,13 +12,19 @@ import SignUpForm from '../components/Form/Form.astro'
 import Footer from '../components/Footer/Footer.astro';
 
 ---
-
-<Layout title="This Is A Test" >
+<Layout title="Landing Page Demo" >
 	<Header />
 	
 	<main class="container mx-auto">
 		<section class="section">
-			<Hero />
+			<Hero
+			  title="Concise Heading that Describes the benefit of your product"
+				description="This is a brief description of the product's benefits."
+				button="Get Started"
+				link="/get-started"
+				image="https://placehold.co/600x600"
+				image_alt="Hero image"
+			/>
 		</section>
 
 		<section id="media" class="section">
@@ -99,8 +105,8 @@ import Footer from '../components/Footer/Footer.astro';
 
 <style lang="css">
 body, html {
-	background: rgb(213,216,226);
-	background: linear-gradient(138deg, rgba(213,216,226,1) 0%, rgba(200,200,232,1) 47%, rgba(148,194,203,1) 100%);
+	/* background: rgb(213,216,226);
+	background: linear-gradient(138deg, rgba(213,216,226,1) 0%, rgba(200,200,232,1) 47%, rgba(148,194,203,1) 100%); */
 }
 main {
   padding-top: 64px;

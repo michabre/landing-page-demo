@@ -43,8 +43,9 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Container className="container" maxWidth="1440">
+        <Toolbar disableGutters sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
           <AcmeLogo />
           <Typography
             variant="h6"
@@ -63,6 +64,7 @@ function ResponsiveAppBar() {
           >
             ACME
           </Typography>
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -117,7 +119,9 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          
+          <Box sx={{ flexGrow: 0 }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link
                 key={page.name}
@@ -128,13 +132,7 @@ function ResponsiveAppBar() {
                 {page.name}
               </Link>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="https://mikevsweb.b-cdn.net/getting-frustrated-at-my-computer.webp" />
-              </IconButton>
-            </Tooltip>
+            </Box>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
