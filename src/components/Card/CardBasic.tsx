@@ -1,14 +1,15 @@
-import { Card, CardBody } from "@nextui-org/react";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import { MdOutlineStarBorder } from "react-icons/md";
 
 export default function CardBasic() {
   return (
     <Card className="mb-4">
-      <CardBody className="p-12">
+      <CardContent className="p-12">
         <MdOutlineStarBorder size={42} />
         <h3 className="text-lg font-bold">Feature</h3>
         <p className="text-base">Make beautiful websites regardless of your design experience.</p>
-      </CardBody>
+      </CardContent>
     </Card>
   );
 }

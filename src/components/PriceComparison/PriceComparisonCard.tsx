@@ -5,6 +5,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 
+import './priceComparison.css';
+
 export default function PriceComparisonCard({type, title, description, price, features, selected}:IPricingComparisonCard) {
   const selectedClass = (selected === "true") ? "selected" : "";
   const showTag = (selected === "true") ? true : false;

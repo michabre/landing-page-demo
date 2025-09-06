@@ -1,11 +1,12 @@
-import {Card, CardBody} from "@nextui-org/react";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 export default function App() {
   return (
     <Card>
-      <CardBody className="p-24 border-2">
+      <CardContent className="p-24 border-2">
         <p className="text-center">Make beautiful websites regardless of your design experience.</p>
-      </CardBody>
+      </CardContent>
     </Card>
   );
 }
