@@ -1,5 +1,15 @@
 import { useState } from "react";
-import {Button, Card, CardBody, Checkbox, Input, Select, SelectItem, Spacer} from "@nextui-org/react";
+
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Checkbox from '@mui/material/Checkbox';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { AiFillAlert } from "react-icons/ai";
 
@@ -11,7 +21,7 @@ export default function SignUpForm() {
   const [checked, setChecked] = useState(false)
   const [form_status, setFormStatus] = useState(false)
 
-  const variant = "flat"
+  const variant = "standard"
 
   const package_options = [
     "Starter Package",
@@ -35,64 +45,67 @@ export default function SignUpForm() {
       {form_status && 
         <div className="w-full mb-4">
           <Card>
-            <CardBody className="flex flex-row justify-start items-center gap-4 bg-red-200">
+            <CardContent className="flex flex-row justify-start items-center gap-4 bg-red-200">
              <AiFillAlert className="text-red-700" size={32} /> <p className="text-base leading-none text-red-700">Please fill in all the fields.</p>
-            </CardBody>
+            </CardContent>
           </Card>
         </div>
       }
       <div className="w-full flex flex-row flex-wrap gap-4">
-        <Input
+        <TextField
+          required
           variant={variant}
+          id="outlined-required"
           type="text"
           label="Name"
-          placeholder="Enter your full name."
+          helperText="Enter your full name."
           defaultValue=""
           className="max-w-[100%]"
           onChange={(e) => setName(e.target.value)}
+          sx={{ width: '100%' }}
         />
         <div className="w-full flex flex-row  gap-4">
-          <Input
+          <TextField
             variant={variant}
             type="email"
             label="Email"
-            placeholder="Enter your email"
+            helperText="Enter your email"
             defaultValue=""
             className="max-w-[50%]"
             onChange={(e) => setEmail(e.target.value)}
+            sx={{ width: '50%',maxWidth: '50%' }}
           />
-          <Input
+          <TextField
             variant={variant}
             type="tel"
             label="Phone"
-            placeholder="Enter your phone number."
+            helperText="Enter your phone number."
             defaultValue=""
-            className="max-w-[50%]"
             onChange={(e) => setPhone(e.target.value)}
+            sx={{ width: '50%', maxWidth: '50%' }}
           />
         </div>
+        <InputLabel id="demo-simple-select-label">Select Package</InputLabel>
         <Select
+          labelId="demo-simple-select-label"
           label="Select Package"
-          placeholder="Select a reason"
-          className="max-w-[100%]"
+          value={price_package}
           onChange={(e) => setPackage(e.target.value)}
+          sx={{ width: '100%', maxWidth: '100%' }}
         >
           {package_options.map((selected_package, index) => (
-            <SelectItem key={index}>
-              {selected_package}
-            </SelectItem>
+            <MenuItem key={index} value={selected_package}>{selected_package}
+            </MenuItem>
           ))}
         </Select>
 
         <div className="w-full">
-            <Checkbox onChange={(e) => setChecked(e.target.checked)}>I agree to the <u>Privacy Policy</u> and <u>Terms and Conditions</u></Checkbox>
+            <FormControlLabel required control={<Checkbox />} label="I agree to the Privacy Policy and Terms and Conditions" />
         </div>
-
-        <Spacer y={4} />
 
         <div className="flex justify-center w-full">
           <div className="w-[60%] flex justify-center align-center">
-            <Button color="primary" size="lg" fullWidth={true} onPress={(e) => handleSubmit()}>
+            <Button color="primary" size="large" fullWidth={true} onClick={handleSubmit} variant="contained" className="flex flex-row justify-center items-center gap-4 px-8 py-4">
               <span className="text-xl font-semibold">Sign Up Now</span>
               <HiOutlineCursorClick size={32} />
             </Button>

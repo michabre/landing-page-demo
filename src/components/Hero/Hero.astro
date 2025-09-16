@@ -1,30 +1,38 @@
 ---
-import {Button} from "@nextui-org/react";
+import Button from '@mui/material/Button';
+
+interface Props {
+	title: string;
+  description: string;
+  button: string;
+  link: string;
+  image: string;
+  image_alt: string;
+}
+
+const { title, description, button, link, image, image_alt } = Astro.props;
 ---
 <div class="hero columns-2">
   <div>
     <div class="hero__content flex h-full flex-col justify-center gap-4 md:items-start">
-      <h2 class="hero__title">Concise Heading
-        that Describes the benefit of your product</h2>
-      <p class="hero__description text-foreground text-center md:text-left">Descriptive content to describe <strong>what</strong> the product is.</p>
-      <Button color="primary" client:visible>Get Started</Button>
+      <h2 class="hero__title">{title}</h2>
+      <p class="hero__description text-foreground text-center md:text-left">{description}</p>
+      <Button variant="contained">{button}</Button>
     </div>
   </div>
   <div>
-    <img src="https://placehold.co/600x600" alt="Hero image" class="hero__image" />
+    <img src={image} alt={image_alt} class="hero__image" />
   </div>
 </div>
 
-<style lang="scss">
-.hero {
-  &__title {
-    font-size: 3.75rem;
-    line-height: 1;
-    letter-spacing: -.025em;
-    font-weight: 800;
-  }
-  &__description {
-    line-height: 2rem;
-  }
+<style>
+.hero__title {
+  font-size: 3.75rem;
+  line-height: 1;
+  letter-spacing: -.025rem;
+  font-weight: 800;
+}
+.hero__description {
+  line-height: 2rem;
 }
 </style>

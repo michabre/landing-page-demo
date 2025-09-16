@@ -1,11 +1,11 @@
 ---
-import PrimaryNav from './PrimaryNav.jsx';
+import ResponsiveAppBar from './ResponsiveAppBar.jsx';
 ---
 <header class="main-header">
-  <PrimaryNav />
+  <ResponsiveAppBar />
 </header>
  
-<style lang="scss">
+<style>
 .main-header {
   background-color: #fff;
   box-shadow: 0px 0px 50px -25px #0e0d0d;
@@ -13,29 +13,31 @@ import PrimaryNav from './PrimaryNav.jsx';
   width: 100%;
   z-index: 99;
 }
-
-.nav{
-    padding: 15px 0;
-    li{
-      list-style: none;
-      margin-top: 0;
-    }
-    .nav-cta{
-      text-align: right;
-    }
-    a:not(.button):not(.logo-link){
-      color: #111;
-      padding: 0 20px;
-      text-decoration: none;
-    }
-    @media (max-width:700px) {
-      nav{
-        display: none;
-      }
-      .nav-cta{
-        position: absolute;
-        right: 20px;
-      }
-    }
-  } 
+.main-header a {
+  color: #fff;
+}
+.nav {
+  padding: 15px 0;
+}
+.nav li{
+  list-style: none;
+  margin-top: 0;
+}
+.nav .nav-cta{
+  text-align: right;
+}
+.nav a:not(.button):not(.logo-link) {
+  color: #111;
+  padding: 0 20px;
+  text-decoration: none;
+}
+@media (max-width:700px) {
+  .nav {
+    display: none;
+  }
+  .nav-cta{
+    position: absolute;
+    right: 20px;
+  }
+}
  </style>
