@@ -9,7 +9,7 @@ export default function CardBlurred({ image, image_alt }) {
       <CardContent className="overflow-visible py-2">
         <img src={image} alt={image_alt} className="object-cover rounded-full opacity-1 aspect-square" width="320" />
       </CardContent>
-      <CardActions className="block text-center">
+      <CardActions className="block text-center" sx={{ display: 'block' }}>
         <h4 className="font-bold text-large">John Smith, <span className="text-xs uppercase">Business Owner</span></h4> 
         <div className="flex justify-center">
           <FaQuoteLeft size={16} color={"#11181C"} />

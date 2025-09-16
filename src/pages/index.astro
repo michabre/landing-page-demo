@@ -1,4 +1,6 @@
 ---
+import Button from '@mui/material/Button';
+
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header/Header.astro';
 import Hero from '../components/Hero/Hero.astro';
@@ -51,7 +53,7 @@ import Footer from '../components/Footer/Footer.astro';
 			<p class="text-base text-center px-40">Subtitle to describe the solution to the users pain points again.</p>
 				
 				<div class="center">
-					<button class="button button-primary">Sign Up</button>
+					<Button variant="contained" size="large">Sign Up</Button>
 				</div>
 				
 				<div class="columns-2 p-4 ">
@@ -103,7 +105,7 @@ import Footer from '../components/Footer/Footer.astro';
 	
 </Layout>
 
-<style lang="css">
+<style>
 body, html {
 	/* background: rgb(213,216,226);
 	background: linear-gradient(138deg, rgba(213,216,226,1) 0%, rgba(200,200,232,1) 47%, rgba(148,194,203,1) 100%); */
